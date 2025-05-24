@@ -53,6 +53,7 @@ app.get('/api/:date',  function (req, res) {
 app.get('/api', (req, res) => {
   const now = new Date();
   res.json({
+    unix: now.getTime(),
     utc: now.toUTCString()
   });
 });
