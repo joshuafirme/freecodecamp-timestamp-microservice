@@ -26,8 +26,8 @@ app.get("/", function (req, res) {
 
 
 
-app.get('/api/:value',  function (req, res) {
- const value = req.params.value;
+app.get('/api/:date',  function (req, res) {
+ const value = req.params.date;
 
   // Check if it's a number (Unix timestamp)
   const isUnix = /^\d+$/.test(value); // Only digits
