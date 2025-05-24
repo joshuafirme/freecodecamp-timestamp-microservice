@@ -50,6 +50,13 @@ app.get('/api/:date',  function (req, res) {
 
 });
 
+app.get('/api', (req, res) => {
+  const now = new Date();
+  res.json({
+    utc: now.toUTCString()
+  });
+});
+
 
 // Listen on port set in environment variable or default to 3000
 var listener = app.listen(process.env.PORT || 3000, function () {
